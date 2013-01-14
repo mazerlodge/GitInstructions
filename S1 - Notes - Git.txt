@@ -38,8 +38,8 @@ git pull origin master
 git add README.md  
 # tells git you changed this file, it is now STAGED
 
-git commit 
-# fuzzy here, had to do git commit -a then set message
+git commit -a
+# this option allows setting the comment vi editor for all modified files
 
 git push origin master
 # this ships changes up to the server.
@@ -47,10 +47,13 @@ git push origin master
 # now invent a new file.
 
 git add LexicalScoping.R
-# tell git to watch the new file
+# tell git to index the new file
 
 git commit -m 'A quick example' LexicalScoping.R
+# stage the new file
+
 git push origin master
+# actually send the file to the server
 
 # now go play with Milestones and Issues
 
