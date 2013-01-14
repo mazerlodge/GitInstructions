@@ -1,0 +1,4 @@
+GitInstructions
+===============
+
+Information about GIt
