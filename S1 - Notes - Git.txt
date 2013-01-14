@@ -1,0 +1,57 @@
+S1 - Notes - Git 
+
+Where to 'git' git.
+http://code.google.com/p/git-osx-installer
+
+http://git-scm.com/book/en/Getting-Started-Installing-Git
+
+Setting up Git:
+https://help.github.com/articles/set-up-git
+
+
+Command Samples
+
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/mazerlodge/IntegrationTest.git
+git push -u origin master
+
+
+== Workflow - initial use of a folder w/ Git ==
+
+# prerequisite: A git repo on github
+mkdir IntegrationTest
+
+git init 
+# creates a .git folder with git goo inside
+
+git remote add origin <url>
+# tells git this folder is bolted to <url>
+
+git pull origin master
+# get the master branch of the repo
+
+# now modify a pulled file, for example README.md
+
+git add README.md  
+# tells git you changed this file, it is now STAGED
+
+git commit 
+# fuzzy here, had to do git commit -a then set message
+
+git push origin master
+# this ships changes up to the server.
+
+# now invent a new file.
+
+git add LexicalScoping.R
+# tell git to watch the new file
+
+git commit -m 'A quick example' LexicalScoping.R
+git push origin master
+
+# now go play with Milestones and Issues
+
+
