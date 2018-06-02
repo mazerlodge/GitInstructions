@@ -1,4 +1,4 @@
 GitInstructions
 ===============
 
-Information about GIt
+Information about Git.
