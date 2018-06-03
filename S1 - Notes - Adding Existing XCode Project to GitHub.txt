@@ -1,0 +1,53 @@
+S1 - Notes - Adding Existing XCode Project to GitHub
+
+Steps to add an existing XCode project to GitHub. 
+
+Note: If XCode is used to create the project, the .xcodeproject directly will be exposed through GitHub.
+These steps prevent that.
+
+Prep
+- Zip project before starting, just in case.
+
+Create a repository on GitHub
+- To keep things simple use the name of the existing XCode project
+- (optional) Set description (e.g. "Weekly Source Code #2018xx")
+- Check box to "Initialize the project with a README" (ignore the message 'skip this step...')
+- Select .gitignore for language of the project (e.g. Objective-C) 
+- Click create repository.
+- (optional) Add tag 'weeklysourcecode'.
+- Edit .gitignore, add the following:
+	# XCode project file
+	*.xcodeproj
+	.DS_Store 
+	
+- Save change w/ comment "Added XCode project file to ignored list" 
+
+Move local code out of the way
+- Close project if it is open in XCode
+- Rename existing project to "{name}_Local" 
+- Open XCode, no project, choose SourceControl -> Clone
+- Select newly created GitHub repository, click the "Clone" button
+- Select the appropriate local folder for source (e.g. XProjects/{language}) 
+- Note, XCode will open the newly created folder, covering up the 'clone projects' dialog
+- Close the XCode 'clone projects' dialog (may be in the background) 
+
+Move local files into newly created 'clone' folder
+- Open additional finder window (cmd-click on XProjects, then navigate to {proj}_Local folder)
+- Copy Project, source, etc. folders to new 'cloned' folder
+- DO NOT Overwrite the .gitignore pulled from the server (if you do, just revert to the server version) 
+- Delete _Local folder.
+
+Update local files before pushing to server
+- Open XCode project now in 'cloned' folder.
+- Add README.md file to XCode project, deselect target for build.
+- Do Global Search/Replace to replace full name in source comments with github user name. 
+- Do Global Search/Replace to replace scarypenguin.com in comments with github user name.
+- Add project description to README.md
+- Verify there are no stray source files in folder that are not in project. 
+
+Add local files to source control
+- Select Source Control -> Commit...
+- Select Source folder (and any other files desired) 
+
+Update server with local source files.
+- Select Source Control -> Push...
