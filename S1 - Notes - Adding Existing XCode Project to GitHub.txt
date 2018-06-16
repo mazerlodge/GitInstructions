@@ -9,12 +9,13 @@ Prep
 - Zip project before starting, just in case.
 
 Create a repository on GitHub
+- (for WSC projects) Check for the current max Weekly Source Code number 
 - To keep things simple use the name of the existing XCode project
-- (optional) Set description (e.g. "Weekly Source Code #2018xx")
+- (for WSC projects) Set description (e.g. "Weekly Source Code #2018xx")
 - Check box to "Initialize the project with a README" (ignore the message 'skip this step...')
 - Select .gitignore for language of the project (e.g. Objective-C) 
 - Click create repository.
-- (optional) Add tag 'weeklysourcecode'.
+- (for WSC projects) Add topic tag 'weeklysourcecode'.
 - Edit .gitignore, add the following:
 	# XCode project file
 	*.xcodeproj
