@@ -36,6 +36,9 @@ git pull origin master
 git checkout -b amend-my-name
 # create a branch 
 
+git branch -a  
+# view all branches.
+
 # now modify a pulled file, for example README.md
 
 git add README.md  
