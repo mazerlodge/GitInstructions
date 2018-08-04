@@ -33,6 +33,9 @@ git remote add origin <url>
 git pull origin master
 # get the master branch of the repo
 
+git checkout -b amend-my-name
+# create a branch 
+
 # now modify a pulled file, for example README.md
 
 git add README.md  
