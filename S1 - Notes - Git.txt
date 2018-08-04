@@ -45,7 +45,10 @@ git commit -a
 # this option allows setting the comment vi editor for all modified files
 
 git push origin master
+~OR~
+git push --set-upstream origin amend-my-name
 # this ships changes up to the server.
+# the second form also establishes the branch if it is new.
 
 # now invent a new file.
 
