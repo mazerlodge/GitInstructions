@@ -49,6 +49,7 @@ git push origin master
 git push --set-upstream origin amend-my-name
 # this ships changes up to the server.
 # the second form also establishes the branch if it is new.
+# note if you omit the name in the first form it pushes the current working branch.
 
 # now invent a new file.
 
