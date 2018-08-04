@@ -54,6 +54,12 @@ git push --set-upstream origin amend-my-name
 # the second form also establishes the branch if it is new.
 # note if you omit the name in the first form it pushes the current working branch.
 
+# Merging branches
+(on branch development)$ git merge master
+(resolve any merge conflicts if there are any)
+git checkout master
+git merge development (there won't be any conflicts now)
+
 # now invent a new file.
 
 git add LexicalScoping.R
