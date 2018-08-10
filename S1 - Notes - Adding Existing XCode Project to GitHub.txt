@@ -21,6 +21,12 @@ Create a repository on GitHub
 	*.xcodeproj
 	.DS_Store 
 	
+	# Documentation artifacts
+	*.pdf 
+
+	# Local binaries
+	bin/
+
 - Save change w/ comment "Added XCode project file to ignored list" 
 
 Move local code out of the way
