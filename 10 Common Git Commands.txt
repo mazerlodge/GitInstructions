@@ -1,0 +1,34 @@
+10 Common Git Commands
+
+Note:
+On Windows, git m/b installed at: C:\Users\USERNAME\AppData\Local\Programs\Git
+This path involves hidden folders, but works.
+Run git-bash while in the install folder and cd to bin to see available shell commands. 
+
+> Inspecting things 
+git diff - See all file changes locally. A file name can be appended to show changes for only one file.
+git log - See all commit history. Can also be used for a file with git log -p my_file. Enter q to exit.
+git blame my_file - See who changed what and when in my_file.
+git reflog - Show a log of changes to the local repository’s HEAD. Good for finding lost work.
+
+> Undo things 
+git reset --hard HEAD— Discard staged and unstaged changes since the most recent commit.
+
+git checkout my_commit— Discard unstaged changes since my_commit.  (ed: does it really? if local changes exist does it trash them?)
+	Footnotes: 
+	HEAD is often used for my_commit to discard changes to your local working directory since the most recent commit
+	If you use checkout with a branch instead of a commit, HEAD is switched to the specified branch and the working directory is updated to match. This is the more common use of the checkout command.
+
+git revert my_commit —Undo the effects of changes in my_commit. revert makes a new commit when it undoes the changes.
+	Footnote: revert is safe for collaborative projects because it doesn’t overwrite history that other users’ branches might depend upon.
+
+git clean -n —Delete untracked files in the local working directory.
+	-n flag is for a dry run where nothing is deleted.
+	-f flag to actually remove the files.
+	-d flag to remove untracked directories.
+	Footnote: By default files untracked by .gitignore will not be deleted, but this behavior can be altered.
+
+git commit --amend - Add your staged changes to the most recent commit.
+	If nothing is staged, this command just allows you to edit the most recent commit message. 
+	Only use this command if the commit has not been integrated into the remote master branch.
+
