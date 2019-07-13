@@ -39,6 +39,12 @@ git checkout -b amend-my-name
 git branch -a  
 # view all branches.
 
+git branch qtest 
+# create a new brach named qtest...
+
+git checkout qtest
+#... and switch to it.
+
 # now modify a pulled file, for example README.md
 
 git add README.md  
