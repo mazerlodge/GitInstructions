@@ -39,11 +39,20 @@ git checkout -b amend-my-name
 git branch -a  
 # view all branches.
 
+-- START adding content to a local branch, then merge it onto the master --
+
 git branch qtest 
 # create a new brach named qtest...
 
 git checkout qtest
 #... and switch to it.
+
+# Modify files as normal and check them in (no need to push if working with a local only branch) 
+
+(on branch development)$ git merge master
+
+
+-- END adding content to a local branch, then merge it onto the master --
 
 # now modify a pulled file, for example README.md
 
