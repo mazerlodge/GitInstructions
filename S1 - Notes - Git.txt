@@ -49,8 +49,10 @@ git checkout qtest
 
 # Modify files as normal and check them in (no need to push if working with a local only branch) 
 
-(on branch development)$ git merge master
-
+(on branch qtest)$ git merge master
+(resolve any merge conflicts if there are any)
+git checkout master
+git merge qtest (there won't be any conflicts now)
 
 -- END adding content to a local branch, then merge it onto the master --
 
