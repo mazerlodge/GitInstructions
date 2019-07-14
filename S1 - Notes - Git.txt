@@ -54,6 +54,9 @@ git checkout qtest
 git checkout master
 git merge qtest (there won't be any conflicts now)
 
+git branch -D qtest 
+# removes the local qtest branch
+
 -- END adding content to a local branch, then merge it onto the master --
 
 # now modify a pulled file, for example README.md
