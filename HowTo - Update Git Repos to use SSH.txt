@@ -1,0 +1,8 @@
+HowTo - Update Git Repos to use SSH 
+
+To update git repos to use SSH, replace the URL in the remote 
+
+Get new URL from Git, grabbing SSH option, e.g. git@github.com:mazerlodge/AWSServerlessWebsite.git
+
+git remote set-url [origin|master] newurl 
+
