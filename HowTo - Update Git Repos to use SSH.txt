@@ -6,3 +6,5 @@ Get new URL from Git, grabbing SSH option, e.g. git@github.com:mazerlodge/AWSSer
 
 git remote set-url [origin|master] newurl 
 
+Example:
+git remote set-url origin git@github.com:mazerlodge/ProjectNameHere.git 
