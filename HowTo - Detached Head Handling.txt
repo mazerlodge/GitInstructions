@@ -1,0 +1,35 @@
+HowTo - Detached Head Handling
+
+Reference
+-----------
+https://www.cloudbees.com/blog/git-detached-head
+https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
+
+Detatched Head means the current checkout isn't the head of all commits.  It's a normal state. 
+
+$ git log --oneline 
+Observe where head is pointing. 
+
+TL;DR the reference? 
+Scenario #1: I’m Here by Accident
+	$git checkout <branch-name>
+	-or-
+	$git switch <branch-name>
+
+Scenario #2: I’ve Made Experimental Changes and I Want to Discard Them
+	Same as scenario #1, just switch branches and go about your business 
+
+	Note: Git may warn you about this being a good time to create a branch 
+
+Scenario #3: I’ve Made Experimental Changes and I Want to Keep Them
+	If you want to keep changes made with a detached HEAD, just create a new branch and switch to it.
+
+	$git branch alt-history
+	$git checkout alt-history
+
+	OK, that's cool but I want to get this stuff on master or origin. 
+	{after the steps above, creating a branch}
+	$git checkout master
+	$git merge alt-history
+	
+
