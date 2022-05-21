@@ -6,6 +6,10 @@ Check if folder is up to date (equiv to $git status)
 	Result: 
 		If all is current a dialog saying working copy is clean. 
 		If differences, a find results window opens showing changed and/or added files
+
+Remove a file before adding it to source control 
+	(Not really a git thing, but good to know)
+	Right-Click file name -> Move to Trash
 	
 Add a new file to source control (equiv to $git add) 
 	Two options (maybe more): 
@@ -24,3 +28,6 @@ Commit, all staged or single file (equiv to $git commit)
 	For a single file, have file active then GitMenu -> Commit... 
 	For multiple, GitMenu -> Commit Staged Changes... 
 
+Push to Origin (equiv to $git push origin main/master) 
+	Git Menu -> Push to Remote...
+		Dialog appears select correct branch (it doesn't auto select the current branch) 
