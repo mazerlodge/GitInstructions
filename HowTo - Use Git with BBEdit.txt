@@ -1,0 +1,26 @@
+HowTo - Use Git with BBEdit 
+
+Check if folder is up to date (equiv to $git status)
+	GitMenu -> Show Working Copy Status...
+	
+	Result: 
+		If all is current a dialog saying working copy is clean. 
+		If differences, a find results window opens showing changed and/or added files
+	
+Add a new file to source control (equiv to $git add) 
+	Two options (maybe more): 
+		With file active, GitMenu -> Add 
+		From result of "Show Working Copy Status...", select file in notes list 
+			right-click menu -> Add 
+		
+		Note: BBEdit provides no feedback to either of these techniques. 
+			To confirm add worked, refresh "Show Working Copy Status..." results window.
+
+Remove an added file (before Commit) 
+	Can try "Show Working Copy Status...", right-click menu -> Remove, but if git log appears
+		Command line $git rm --cached <filename>
+			
+Commit, all staged or single file (equiv to $git commit)
+	For a single file, have file active then GitMenu -> Commit... 
+	For multiple, GitMenu -> Commit Staged Changes... 
+
